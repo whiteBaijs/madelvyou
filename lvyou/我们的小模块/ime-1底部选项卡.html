@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>底部导航选项卡</title>
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/model.css">
+		<script type="text/javascript" src="lib/jquery-1.11.3.min.js">
+		</script>
+		<style>
+			a {
+				text-decoration: none;
+			}
+			
+			.tab_nav {
+				width: 100%;
+				height: 40px;
+				background: #7c8fa2;
+				display: inline-block;
+				position: relative;
+			}
+			
+			.tab_nav .nav_play {
+				width: 1000px;
+				margin: 0 auto;
+			}
+			
+			.tab_nav .nav_play li {
+				float: left;
+				width: 166px;
+				text-align: center;
+			}
+			.tab_nav .nav_play li.on{
+				background:#c0d2e4;
+			}
+			.tab_nav .nav_play li.on a{
+				color: #333;
+			}
+			
+			.tab_nav .nav_play li a {
+				color: #fff;
+				font-size: 14px;
+				line-height: 40px;
+			}
+			
+			.tab_nav .nav_play li:hover {
+				border: none;
+				background: #8da1b5;
+			}
+			
+			.tab_nav .nav_con {
+				width:996px;
+				position:absolute;
+				left:183px;
+				background: #f0f0f0;
+				top:40px;
+			}
+			.tab_nav .nav_con div{padding: 20px;display: none;}
+			
+			.nav_con h2,
+			.nav_con h2 a {
+				font-size: 16px;
+				font-weight: bold;
+				color: #55556b;
+			}
+			
+			.nav_con p a {
+				white-space: nowrap;
+				color: #555;
+				font-size: 12px;
+				
+			}
+			
+			.nav_con p {
+				font-size: 12px;
+				line-height: 22px;
+			}
+			.nav_con p i{padding:0 5px;}
+		</style>
+
+	</head>
+<script>
+	$(function(){
+		var $tab_nav = $('#tab_nav'),
+		    $lis     = $tab_nav.find('li'),
+		    $nav_con = $tab_nav.children('.nav_con').find('div');
+//	    console.log($lis);
+		$lis.click(function(){
+			$(this).addClass('on').siblings('li').removeClass('on');
+
+			$nav_con.eq($(this).index()).css({'display':'block'}).siblings('div')
+				.css({'display':'none'});
+			
+		});
+	})
+</script>
+	
+
+	<body>
+
+		<div class="tab_nav" id='tab_nav'>
+			<ul class="nav_play">
+				<li><a href='#'>酒店预订</a></li>
+				<li><a href='#'>机票查询</a></li>
+				<li><a href='#'>酒店团购</a></li>
+				<li><a href='#'>热门城市</a></li>
+				<li><a href='#'>合作伙伴</a></li>
+				<li><a href='#'>常见酒店</a></li>
+			</ul>
+			<div class='nav_con'>
+				<div class="bottom_order">
+					<h2>酒店预订</h2>
+					<p>艺龙旅行网提供全球50万家酒店的预订服务和酒店团购服务。通过真实的酒店照片、酒店评价，无论您是和家人一起旅游度假还是商务出行，我们都能为您提供称心如意的酒店。</p>
+					<h2><a href="" class='fb'>艺龙酒店地表大全</a></h2>
+					<p>为了方便用户快速定位酒店而存在，我们涵盖了北京、西安、上海、成都、广州、武汉、南京、东莞、长沙、深圳、重庆等城市的常见地标类型。</p>
+				</div>
+				<div class="bottom_plan">
+					<h2>机票查询</h2>
+					<p>艺龙旅行网是中航协认证的机票服务提供商，提供国内和国际的特价机票、航班信息、机票查询和预订服务。</p>
+				</div>
+				<div class="bottom_hotel">
+					<h2>酒店团购</h2>
+					<p>
+						<a href="">北京酒店团购</a><i>|</i>
+						<a href="">上海酒店团购</a><i>|</i>
+						<a href="">三亚酒店团购</a><i>|</i>
+						<a href="">广州酒店团购</a><i>|</i>
+						<a href="">杭州酒店团购</a><i>|</i> 
+						<a href="">厦门酒店团购</a><i>|</i>  
+						<a href="">苏州酒店团购</a><i>|</i>
+						<a href="">深圳酒店团购</a><i>|</i>  
+            			<a href="">西安酒店团购</a><i>|</i>
+						<a href="">成都酒店团购</a><i>|</i>
+						<a href="">丽江酒店团购</a>
+						<a href="">武汉酒店团购</a><i>|</i>
+						<a href="">宁波酒店团购</a><i>|</i>
+						<a href="">重庆酒店团购</a><i>|</i>
+						<a href="">大连酒店团购</a><i>|</i>
+						<a href="">南京酒店团购</a><i>|</i>
+						<a href="">青岛酒店团购</a><i>|</i> 
+						<a href="">桂林酒店团购</a><i>|</i>
+						<a href="">天津酒店团购</a><i>|</i> 
+						<a href="">沈阳酒店团购</a><i>|</i>
+					</p>
+				</div>
+				<div class="bottom_city">
+					<h2>热门城市</h2>
+					<p>
+						<a href="">北京酒店</a><i>|</i>
+						<a href="">上海酒店</a><i>|</i>
+						<a href="">杭州酒店</a><i>|</i>
+						<a href="">成都酒店</a><i>|</i>
+						<a href="">深圳酒店</a><i>|</i> 
+						<a href="">青岛酒店</a><i>|</i>  
+						<a href="">苏州酒店</a><i>|</i>
+						<a href="">广州酒店</a><i>|</i>  
+            			<a href="">香港酒店</a><i>|</i>
+						<a href="">厦门酒店</a><i>|</i>
+						<a href="">天津酒店</a><i>|</i>
+						<a href="">西安酒店</a><i>|</i>
+						<a href="">武汉酒店</a><i>|</i>
+						<a href="">重庆酒店</a><i>|</i>
+						<a href="">沈阳酒店</a><i>|</i>
+						<a href="">长沙酒店</a><i>|</i>
+						<a href="">三亚酒店</a><i>|</i> 
+						<a href="">珠海酒店</a><i>|</i>
+						<a href="">宁波酒店</a><i>|</i> 
+						<a href="">南京酒店</a><i>|</i>
+						<a href="">大连酒店</a><i>|</i>
+						<a href="">济南酒店</a><i>|</i>
+						<a href="">昆明酒店</a><i>|</i>
+						<a href="">合肥酒店</a><i>|</i>	
+					</p>
+				</div>
+
+				<div class="bottom_partner">
+					<h2>合作伙伴</h2>
+					<p>
+						<a href="">QQ网购·旅游</a><i>|</i>
+						<a href="">西祠胡同</a><i>|</i>
+						<a href="">阳光旅行网</a><i>|</i>
+						<a href="">住哪网</a><i>|</i>
+						<a href="">酷讯网</a><i>|</i> 
+						<a href="">TripAdvisor</a><i>|</i>  
+						<a href="">火车网</a><i>|</i>
+						<a href="">吉祥航空</a><i>|</i>  
+            			<a href="">均瑶旅行网</a><i>|</i>
+						<a href="">北京房产</a><i>|</i>
+						<a href="">装修家居</a><i>|</i>
+						<a href="">住哲酒店管理系统</a><i>|</i>
+					</p>
+				</div>
+				<div class="bottom_usual">
+					<h2>常见酒店</h2>
+					<p>
+						<a href="">北京酒店团购</a><i>|</i>
+						<a href="">上海酒店团购</a><i>|</i>
+						<a href="">三亚酒店团购</a><i>|</i>
+						<a href="">广州酒店团购</a><i>|</i>
+						<a href="">杭州酒店团购</a><i>|</i> 
+						<a href="">厦门酒店团购</a><i>|</i>  
+						<a href="">苏州酒店团购</a><i>|</i>
+						<a href="">深圳酒店团购</a><i>|</i>  
+            			<a href="">西安酒店团购</a><i>|</i>
+						<a href="">成都酒店团购</a><i>|</i>
+						<a href="">丽江酒店团购</a>
+						<a href="">武汉酒店团购</a><i>|</i>
+						<a href="">宁波酒店团购</a><i>|</i>
+						<a href="">重庆酒店团购</a><i>|</i>
+						<a href="">大连酒店团购</a><i>|</i>
+						<a href="">南京酒店团购</a><i>|</i>
+						<a href="">青岛酒店团购</a><i>|</i> 
+						<a href="">桂林酒店团购</a><i>|</i>
+						<a href="">天津酒店团购</a><i>|</i> 
+						<a href="">沈阳酒店团购</a><i>|</i>
+						<a href="">北京酒店团购</a><i>|</i>
+						<a href="">上海酒店团购</a>
+						<a href="">北京酒店团购</a><i>|</i>
+						<a href="">上海酒店团购</a><i>|</i>
+						<a href="">三亚酒店团购</a><i>|</i>
+						<a href="">广州酒店团购</a><i>|</i>
+						<a href="">杭州酒店团购</a><i>|</i> 
+						<a href="">厦门酒店团购</a><i>|</i>  
+						<a href="">苏州酒店团购</a><i>|</i>
+						<a href="">深圳酒店团购</a><i>|</i>  
+            			<a href="">西安酒店团购</a><i>|</i>
+						<a href="">成都酒店团购</a><i>|</i>
+						<a href="">丽江酒店团购</a>
+						<a href="">武汉酒店团购</a><i>|</i>
+						<a href="">宁波酒店团购</a><i>|</i>
+						<a href="">重庆酒店团购</a><i>|</i>
+						<a href="">大连酒店团购</a><i>|</i>
+						<a href="">南京酒店团购</a><i>|</i>
+						<a href="">青岛酒店团购</a><i>|</i> 
+						<a href="">桂林酒店团购</a><i>|</i>
+						<a href="">天津酒店团购</a><i>|</i> 
+						<a href="">沈阳酒店团购</a><i>|</i>
+						<a href="">北京酒店团购</a><i>|</i>
+						<a href="">上海酒店团购</a>
+						
+					
+					</p>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

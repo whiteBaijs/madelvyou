@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>china目的地推荐model</title>
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="css/base.css">
+
+</head>
+<style>
+    /*公用*/
+  .br{border-right: 1px solid #f1f1f1;}
+  .bt{border-right: 1px solid #f1f1f1;}
+/*.travel_guide_wrap{width: 100%;background:pink;}*/
+    .travel_guide{width:1200px;height:274px;margin:20px auto;}  
+    .travel_guide a{text-decoration: none;}
+    /*旅游指南顶部标题 start*/
+    .travel_title{height: 40px;line-height: 40px;border-bottom:2px solid #77cc11;}
+    .travel_title a{font-size:24px;color:#77cc11;}
+    /*旅游指南顶部标题 end*/
+    .aim-recommend{margin-top: 18px;}
+   .aim-recommend li{width:397px;height:86px;float: left;padding-bottom: 10px;border-bottom:1px solid #f1f1f1;}
+   .aim-recommend li.pt{padding-top: 10px;border-bottom: none;}
+   .aim-recommend li dl{width:271px;height:80px;/*margin-right: 15px;*/}
+   .aim-recommend dt{color: #8C2;margin: 3px 0 5px 4px;font-size: 18px;}
+   .aim-recommend dd:hover{background:#77cc11;}
+   .aim-recommend dd:hover a{color: #fff;}
+
+   .aim-recommend dl dd{height:22px;float: left;font-size: 14px;line-height: 22px;padding:0 5px;margin: 0 5px 4px 0;cursor: pointer;}
+    .aim-recommend dl a{color: #555;}
+    .aim-recommend li div{position: relative;}
+   .aim-recommend li div{width:80px;height:80px;background:url(img/index/hotel_index_icon.png) no-repeat;margin-left:15px;margin-right: 10px;overflow: hidden;}
+   .aim-recommend li em{position:absolute;left:0;top:0px;width:80px;height:0px;background:url(img/index/hotel_index_icon.png) no-repeat;transition:all 0.5s;}
+   .aim-recommend li:hover div em{height:80px;}
+   .aim-recommend .bg-rec1{background-position:-255px 0px;}
+   .aim-recommend .bg-rec2{background-position:-595px 0px;}
+   .aim-recommend .bg-rec3{background-position:-170px 0px;}
+   .aim-recommend .bg-rec4{background-position:-340px 0px;}
+   .aim-recommend .bg-rec5{background-position:-85px 0px;}
+   .aim-recommend .bg-rec6{background-position:-509px 0px;}
+
+   .aim-recommend .bg-rec1 em{background-position:-255px -100px;}
+   .aim-recommend .bg-rec2 em{background-position:-595px -100px;}
+   .aim-recommend .bg-rec3 em{background-position:-170px -100px;}
+   .aim-recommend .bg-rec4 em{background-position:-340px -100px;}
+   .aim-recommend .bg-rec5 em{background-position:-85px -100px;}
+   .aim-recommend .bg-rec6 em{background-position:-509px -100px;}
+
+
+
+</style>
+<script src='lib/jquery-1.11.3.min.js'></script>
+<script>
+    $(function(){
+        
+    });
+</script>
+<body>
+    <div class="travel_guide_wrap">
+
+        <div class="travel_guide ">
+            <div class="travel_title">
+                <h3><a href="#">目的地推荐</a></h3>
+            </div>
+            <ul class="aim-recommend clearfix" id='aim-recommend'>
+               <li class='br'>
+                    <div class='bg-rec1 fl'><em></em></div>
+                    <dl class='fl'>  
+                       <dt>赏花</dt>
+                       <dd><a href=''>北京</a></dd>
+                       <dd><a href=''>武汉</a></dd>
+                       <dd><a href=''>婺源</a></dd>
+                       <dd><a href=''>汉中</a></dd>
+                       <dd><a href=''>罗平</a></dd>
+                       <dd><a href=''>洛阳</a></dd>
+                       <dd><a href=''>苏州</a></dd>
+                       <dd><a href=''>杭州</a></dd>
+                       <dd><a href=''>林芝</a></dd>
+                    </dl>
+
+               </li>
+              <li class='br'>
+                    <div class='bg-rec2 fl'><em></em></div>
+                     
+                    <dl class=' fl'>  
+                       <dt>天然氧吧</dt>
+                       <dd><a href=''>拉萨</a></dd>
+                       <dd><a href=''>大理</a></dd>
+                       <dd><a href=''>舟山</a></dd>
+                       <dd><a href=''>厦门</a></dd>
+                       <dd><a href=''>昆明</a></dd>
+                       <dd><a href=''>绵阳</a></dd>
+                       <dd><a href=''>黄山</a></dd>
+                       <dd><a href=''>三亚</a></dd>
+                   </dl>
+               </li>
+              <li>
+                    <div class='bg-rec3 fl'><em></em></div>
+                     
+                    <dl class='fl'>  
+                       <dt>古镇</dt>
+                       <dd><a href=''>乌镇</a></dd>
+                       <dd><a href=''>同里</a></dd>
+                       <dd><a href=''>周庄</a></dd>
+                       <dd><a href=''>西递宏村</a></dd>
+                       <dd><a href=''>丽江</a></dd>
+                       <dd><a href=''>黄姚</a></dd>
+                       <dd><a href=''>南浔</a></dd>
+                       <dd><a href=''>平遥</a></dd>
+                       <dd><a href=''>凤凰</a></dd>
+                   </dl>
+               </li>
+              <li class='br pt'>
+                    <div class='bg-rec4 fl'><em></em></div>
+                     
+                    <dl class='fl'>  
+                       <dt>世界遗产</dt>
+                       <dd><a href=''>九寨沟</a></dd>
+                       <dd><a href=''>泰山</a></dd>
+                       <dd><a href=''>青城山</a></dd>
+                       <dd><a href=''>武当山</a></dd>
+                       <dd><a href=''>莫高窟</a></dd>
+                       <dd><a href=''>西安</a></dd>
+                       <dd><a href=''>安阳殷墟</a></dd>
+                       <dd><a href=''>元阳梯田</a></dd>
+                   </dl>
+               </li>
+              <li class='br pt'>
+                    <div class='bg-rec5 fl'><em></em></div>
+                     
+                   <dl class='fl'>  
+                       <dt>登山</dt>
+                       <dd><a href=''>泰山</a></dd>
+                       <dd><a href=''>黄山</a></dd>
+                       <dd><a href=''>长白山</a></dd>
+                       <dd><a href=''>武当山</a></dd>
+                       <dd><a href=''>普陀山</a></dd>
+                       <dd><a href=''>五台山</a></dd>
+                       <dd><a href=''>恒山</a></dd>
+                   </dl>
+               </li>
+               <li class='pt'>
+                    <div class='bg-rec6 fl'><em></em></div>
+                     
+                    <dl class='fl'>  
+                       <dt>温泉</dt>
+                       <dd><a href=''>内蒙阿尔山</a></dd>
+                       <dd><a href=''>东北长白山</a></dd>
+                       <dd><a href=''>云南腾冲热海</a></dd>
+                       <dd><a href=''>西藏羊八井</a></dd>
+                    </dl>
+               </li>
+
+            </ul>            
+        </div>
+
+    </div>
+</body>
+</html>

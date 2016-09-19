@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>汽车票</title>
+	 <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/model.css">
+    <link rel="stylesheet" href="../css/index.css">
+	<style>
+	/*取票方式start*/
+  .box990{width:990px;margin:25px auto;overflow: hidden;}
+  .take_out_ticket{width:990px;height:60px;/*padding:10px 0 30px;*/margin-left: -1px;}
+  .take_out_ticket li{float:left;width:279px;height:60px;padding:0px 0 0px 50px;border-left:1px solid #e4e4e4;}
+
+  .take_out_ticket li i{float: left;width: 60px;height:60px;margin-right: 13px;}
+  .take_out_ticket li div{padding:10px 0;}
+  .take_out_ticket li h2{ color:#0054bc;}
+  .take_out_ticket li p{color: #4e7eb4;}
+  .take_out_ticket .icon-1{background:url(../img/car_ticket/bus_icon.png) 0 0;}
+  .take_out_ticket .icon-2{background:url(../img/car_ticket/bus_icon.png) -61px 0;}
+  .take_out_ticket .icon-3{background:url(../img/car_ticket/bus_icon.png) -122px 0;}
+	/*取票方式end*/
+  
+  /*景区直通线start*/
+ .roundTravel {margin-top:35px;}
+ .roundTravel .travel_title{border-bottom:2px solid #ccc;text-indent: 20px;}
+ .roundTravel .travel_title h3 a{font-size:28px;color: #555;}
+ .travelRoute{width: 100%;margin-top: 20px;}
+ .routePic{position: relative;}
+ .travelRoute ul li{width: 240px;height: 278px;float:left;margin-right:10px;margin-bottom: 10px;}
+ .travelRoute ul li.picLast{margin-right:0;}
+ .routePic img{display:block;width: 240px;height:190px;}
+ .routePic p{width:100%;height: 40px;font: 16px/40px Microsoft Yahei;position: absolute;bottom: 0px;left: 0;color: #fff;background: rgba(0,0,0,.5);text-indent: 10px;}
+ .routeCon{width: 100%;height: 88px;background: #f7f7f7;}
+ .travelRoute ul li:hover .routeCon{background:#f8fbff;}
+ .routeCon i{display: inline-block;}
+ .routeCon .route{width: 100%;color: #3377dd;font: 16px/40px Microsoft Yahei;border-bottom:1px dashed #ccc;}
+ .route span{width:95px;text-align: left;}
+ .route span.fl{text-align: right;}
+ .route i{width:50px;height:20px;background: url(../img/car_ticket/bus_icon.png) -405px -12px;margin-top:5px;}
+ .routeCon .price{height:27px;padding:10px 0;text-align: center;line-height: 27px;}
+ .price i{background:pink;width: 22px;height: 22px;background: url(../img/car_ticket/bus_icon.png) -345px -15px;position: relative;top: 5px;}
+ .price span{color: #F60;font: 24px Arial;}
+  /*景区直通线end*/
+	</style>
+	<script src='../lib/jquery-1.11.3.min.js'></script>
+<script>
+    $(function(){
+       
+        
+    })
+</script>
+</head>
+<body>
+	<!--990的版心-->
+	<div class="box990">
+		<!--取票方式start-->
+		<ul class="take_out_ticket clearfix">
+     <li>
+       <i class='icon-1'></i>
+       <div>
+          <h2 class="f20">快速出票</h2>
+          <p class="f12">第一时间反馈出票结果</p>
+      </div>
+     </li>
+     <li>
+       <i class='icon-2'></i>
+       <div>
+          <h2 class="f20">全面覆盖</h2>
+          <p class="f12">近百个城市已能在线预定</p>
+      </div>
+     </li>
+     <li>
+       <i class='icon-3'></i>
+       <div>
+          <h2 class="f20">安全支付</h2>
+          <p class="f12">支持支付宝支付，放心购票</p>
+      </div>
+     </li>
+
+  </ul>
+	<!--取票方式end-->
+	
+	<!--景区直通线start-->
+	<div class="roundTravel">
+		<div class="travel_title">
+                <h3><a href="#">景区直通线</a></h3>
+         </div>
+         <!--路线start-->
+         <div class="travelRoute">
+         	<ul class='clearfix'>
+         		<li>
+         			<a href="#">
+						<div class="routePic">
+         					<img src="../img/car_ticket/huangshan.jpg" alt="黄山" />
+         					<p>黄山</p>
+						</div>
+         				<div class="routeCon clearfix">
+         					<p class='route clearfix'>
+				      			<span class='place fl'>上海</span>
+				      			<i class='fl'></i>
+				      			<span class='place fr'>黄山</span>
+				      		</p>
+				      		<p class='price'>
+				      			<i class='icon-plan'></i>
+					      		汽车票
+					      		<span>¥133</span>
+				      		</p>
+         				</div>
+         			</a>
+         		</li>
+         		<li>
+         			<a href="#">
+						<div class="routePic">
+         					<img src="../img/car_ticket/jiuzhaigou.jpg" alt="九寨沟" />
+         					<p>九寨沟</p>
+						</div>
+         				<div class="routeCon clearfix">
+         					<p class='route clearfix'>
+				      			<span class='place fl'>成都</span>
+				      			<i class='fl'></i>
+				      			<span class='place fr'>九寨沟</span>
+				      		</p>
+				      		<p class='price'>
+				      			<i class='icon-plan'></i>
+					      		汽车票
+					      		<span>¥157</span>
+				      		</p>
+         				</div>
+         			</a>
+         		</li>
+         		<li>
+         			<a href="#">
+						<div class="routePic">
+         					<img src="../img/car_ticket/nanxun.jpg" alt="南浔古镇" />
+         					<p>南浔古镇</p>
+						</div>
+         				<div class="routeCon clearfix">
+         					<p class='route clearfix'>
+				      			<span class='place fl'>苏州</span>
+				      			<i class='fl'></i>
+				      			<span class='place fr'>南浔</span>
+				      		</p>
+				      		<p class='price'>
+				      			<i class='icon-plan'></i>
+					      		汽车票
+					      		<span>¥5</span>
+				      		</p>
+         				</div>
+         			</a>
+         		</li>
+         		<li class='picLast'>
+         			<a href="#">
+						<div class="routePic">
+         					<img src="../img/car_ticket/wuzhen.jpg" alt="乌镇" />
+         					<p>乌镇</p>
+						</div>
+         				<div class="routeCon clearfix">
+         					<p class='route clearfix'>
+				      			<span class='place fl'>杭州</span>
+				      			<i class='fl'></i>
+				      			<span class='place fr'>乌镇</span>
+				      		</p>
+				      		<p class='price'>
+				      			<i class='icon-plan'></i>
+					      		汽车票
+					      		<span>¥30</span>
+				      		</p>
+         				</div>
+         			</a>
+         		</li>
+         		<li>
+         			<a href="#">
+						<div class="routePic">
+         					<img src="../img/car_ticket/qiandaohu.jpg" alt="千岛湖" />
+         					<p>千岛湖</p>
+						</div>
+         				<div class="routeCon clearfix">
+         					<p class='route clearfix'>
+				      			<span class='place fl'>杭州</span>
+				      			<i class='fl'></i>
+				      			<span class='place fr'>淳安</span>
+				      		</p>
+				      		<p class='price'>
+				      			<i class='icon-plan'></i>
+					      		汽车票
+					      		<span>¥100</span>
+				      		</p>
+         				</div>
+         			</a>
+         		</li>
+         		<li>
+         			<a href="#">
+						<div class="routePic">
+         					<img src="../img/car_ticket/huangshan.jpg" alt="张家界" />
+         					<p>张家界</p>
+						</div>
+         				<div class="routeCon clearfix">
+         					<p class='route clearfix'>
+				      			<span class='place fl'>长沙</span>
+				      			<i class='fl'></i>
+				      			<span class='place fr'>张家界</span>
+				      		</p>
+				      		<p class='price'>
+				      			<i class='icon-plan'></i>
+					      		汽车票
+					      		<span>¥119</span>
+				      		</p>
+         				</div>
+         			</a>
+         		</li>
+         		<li>
+         			<a href="#">
+						<div class="routePic">
+         					<img src="../img/car_ticket/famensi.jpg" alt="法门寺" />
+         					<p>法门寺</p>
+						</div>
+         				<div class="routeCon clearfix">
+         					<p class='route clearfix'>
+				      			<span class='place fl'>西安</span>
+				      			<i class='fl'></i>
+				      			<span class='place fr'>扶风</span>
+				      		</p>
+				      		<p class='price'>
+				      			<i class='icon-plan'></i>
+					      		汽车票
+					      		<span>¥26</span>
+				      		</p>
+         				</div>
+         			</a>
+         		</li>
+         		<li class='picLast'>
+         			<a href="#">
+						<div class="routePic">
+         					<img src="../img/car_ticket/shaolinsi.jpg" alt="少林寺" />
+         					<p>少林寺</p>
+						</div>
+         				<div class="routeCon clearfix">
+         					<p class='route clearfix'>
+				      			<span class='place fl'>郑州</span>
+				      			<i class='fl'></i>
+				      			<span class='place fr'>登封</span>
+				      		</p>
+				      		<p class='price'>
+				      			<i class='icon-plan'></i>
+					      		汽车票
+					      		<span>¥23</span>
+				      		</p>
+         				</div>
+         			</a>
+         		</li>
+         	</ul>
+         </div>
+         <!--路线end-->
+	</div>
+	<!--景区直通线end-->
+	
+	</div>
+  
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ime-rotate</title>
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/model.css">
+</head>
+
+<script src='lib/jquery-1.11.3.min.js'></script>
+<script>
+    $(function(){
+       
+        
+    })
+</script>
+<style>
+  .suprise-wrap{width:100%;}
+  .surprise-con{width: 1200px;height:180px;background:#f7f7f7;margin:0px auto;overflow: hidden;}
+  .surprise-top{width: 1160px;height:60px;padding:20px;border-bottom: 1px solid #e5e5e5;}
+  .surprise-con ul{width: 1160px;height:60px;}
+  .surprise-con ul li{width:290px;float: left;}
+  .surprise-con ul li:hover i{animation:myRotate 0.3s ease;-webkit-animation-iteration-count:3; -moz-animation-iteration-count:3;-ms-animation-iteration-count:3;-o-animation-iteration-count:3;animation-iteration-count:3;}
+  @-webkit-keyframes -webkit-myRotate{
+      0%{transform: rotate(0deg);}
+      25%{transform: rotate(-15deg);}
+      50%{transform: rotate(-30deg);}
+      75%{transform: rotate(-15deg);}
+      100%{transform: rotate(0deg);}
+  }
+  @-moz-keyframes -moz-myRotate{
+      0%{transform: rotate(0deg);}
+      25%{transform: rotate(-15deg);}
+      50%{transform: rotate(-30deg);}
+      75%{transform: rotate(-15deg);}
+      100%{transform: rotate(0deg);}
+  }
+  @-ms-keyframes -ms-myRotate{
+      0%{transform: rotate(0deg);}
+      25%{transform: rotate(-15deg);}
+      50%{transform: rotate(-30deg);}
+      75%{transform: rotate(-15deg);}
+      100%{transform: rotate(0deg);}
+  }
+  @-o-keyframes -o-myRotate{
+      0%{transform: rotate(0deg);}
+      25%{transform: rotate(-15deg);}
+      50%{transform: rotate(-30deg);}
+      75%{transform: rotate(-15deg);}
+      100%{transform: rotate(0deg);}
+  }
+  @keyframes myRotate{
+      0%{transform: rotate(0deg);}
+      25%{transform: rotate(-15deg);}
+      50%{transform: rotate(-30deg);}
+      75%{transform: rotate(-15deg);}
+      100%{transform: rotate(0deg);}
+  }
+  .surprise-con ul span{vertical-align: 25px;}
+  .surprise-con ul i{display:inline-block;width:60px;height:60px;background:url(img/index/hotel_index_icon.png);margin-right: 10px;}
+   .surprise-con ul .sur-icon1{background-position:-286px -218px;}
+   .surprise-con ul .sur-icon2{background-position:-354px -218px;}
+   .surprise-con ul .sur-icon3{background-position:-423px -218px;}
+   .surprise-con ul .sur-icon4{background-position:-490px -220px;}
+   .surprise {width: 1200px;}
+    .surprise .sur-email{width: 680px;margin:24px auto 0px;}
+    .surprise .sur-email span{color: #71829d}
+    .surprise .sur-email input{width: 206px;height: 28px;border:none; border:1px solid #cccccc;color: #555;text-indent: 5px;}
+    .surprise .sur-email button{width:80px;height:30px;border:none;color:#fff;background: #3377dd;margin-left:-4px;}
+    .surprise .sur-left{width:110px;height: 80px;background:url(img/index/hotel_index_icon.png) -590px -210px;margin-left:-20px;transition:all 1s;}
+    .surprise .sur-right{/*width:94px;height:80px;*/line-height: 80px;padding: 0 10px 0 0;}
+    .surprise .sur-right a{color:#3377dd;font:14px/80px Microsoft yahei;}
+    .surprise .sur-right a:hover{color:#ff6a6a;}
+    .surprise:hover .sur-left{margin-left: 0;}
+</style>
+<body>
+<div class="suprise-wrap mt20">
+    <div class="surprise-con">
+        <div class='surprise-top'>
+          <ul>
+              <li><i class='sur-icon1'></i><span>全球50万家酒店</span></li>
+              <li><i class='sur-icon2'></i><span>订酒店返现金高达20%</span></li>
+              <li><i class='sur-icon3'></i><span>国际酒店8折起</span></li>
+              <li><i class='sur-icon4'></i><span>7×24小时服务</span></li>
+          </ul>
+        </div>
+        <div class='surprise clearfix'>
+            <div class="sur-left fl"></div>
+            <div class="sur-right fr"><a href="">艺龙服务协议</a></div>
+            <div class="sur-email">
+                <span>亲，留下您的邮箱，会有惊喜呦~</span>
+                <input type="email" placeholder='请输入您的E-mail'>
+                <button>立即订阅</button>
+            </div>
+            
+        </div>
+      
+    </div>
+  </div>
+</body>
+</html>

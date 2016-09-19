@@ -1,0 +1,66 @@
+
+/*火车票*/
+/*描述：介绍App (pic)start--*/
+.shareApp-wrap{width:100%;text-align: center;height:88px;padding:10px 0;background:#f0fbff;}
+.shareApp-wrap img{display: block;margin:0 auto;}
+/*.shareApp{width: 751px;height:88px;}*/
+/*--描述：介绍App (pic)end--*/
+ .box960{width:960px;margin:0 auto ;overflow: hidden;}
+
+  .take_out_ticket{height:80px;padding:10px 0 30px;
+    margin-left: -1px;}
+  .take_out_ticket li{float:left;width:299px;height:62px;padding:10px 0 10px 20px;border-left:1px solid #e4e4e4;}
+
+  .take_out_ticket li i{float: left;width: 60px;height:60px;margin-right: 13px;}
+  .take_out_ticket li div{padding:10px 0;}
+  .take_out_ticket li h2{ color:#0054bc;}
+  .take_out_ticket li p{color: #4e7eb4;}
+  .take_out_ticket .icon-1{background:url(../img/train_ticket/train_icon.png) -1px -198px;}
+  .take_out_ticket .icon-2{background:url(../img/train_ticket/train_icon.png) -62px -198px;}
+  .take_out_ticket .icon-3{background:url(../img/train_ticket/train_icon.png) -123px -198px;}
+  .train_ticket_title{height:40px;width:100%;padding-bottom:20px;font-size: 28px;color:#555;background:url(../img/train_ticket/train_icon.png) 0 -485px;}
+  .train_ticket_title span{background:#fff;float:left;padding-right: 15px;}
+
+   /*引用旅游指南start*/
+   .orderList_wrap a{text-decoration: none;}
+   .orderList_wrap{width:115px;height:335px;border-right: 1px solid #f2f2f2;float:left;/*background:burlywood;*/}
+   /*旅游指南左侧选项卡 start*/
+    .tab_show_img{width:580px;height: 220px;margin-right: 20px;}
+    /*#89ca00*/
+    .orderList_wrap ul{width:115px;/*margin-right: 5px;*/}
+    .orderList_wrap ul li{width:111px;height:50px;line-height:50px;padding-left:4px;}
+    .orderList_wrap ul li.on{padding-left:0px;border-left:4px solid #137cfc;border-right:1px solid #fff;}
+    
+    .orderList_wrap ul li.on a{color: #137cfc;}
+    .orderList_wrap ul a{display:block;height:48px;font:14px/48px Microsoft yahei;text-indent:10px;color:#555;border-top:1px solid #fff;border-bottom:1px solid #fff;}
+    .orderList_wrap ul li.on a{border-top:1px solid #f2f2f2;border-bottom:1px solid #f2f2f2;}
+   /*{width:260px;height:144px;}*/
+	.orderList_right{width:844px;height:380px;position:relative;float:left;}
+   .orderList_right ol{width: 100%;height: 330px;display: none;}
+   .orderList_right ol.show{display: block;}
+   .orderList_right ol li{width: 260px;height: 140px;padding-left: 20px;padding-bottom: 25px;float: left;}
+   .orderList_right ol li a{display:block;color:#555;border:1px solid #d8e9f1;font-size:12px;}
+   .orderList_right .a_top{height:95px;width: 258px;border-bottom:1px solid #fff;border-radius:5px 5px 0 0;background: #eef8ff;}
+   .orderList_right a i{display:inline-block; background:url(../img/train_ticket/train_icon.png);position: relative;}
+   .orderList_right .a_top i{width:38px;height: 20px;margin-top: 16px;background-position:-86px 7px;}
+   
+   .orderList_right .a_top .place{font-size:20px;color:#805555;width:100px;height:20px;
+   padding:15px 5px;text-align:left;}
+   .orderList_right .a_top .price{font-size:20px;}
+   .orderList_right .a_top span.fl{text-align: right;}
+   .orderList_right .a_top p.bottom{height: 30px;text-align: center;line-height:30px;width:100%;}
+   .orderList_right .a_top p.bottom span{line-height: 20px;position: relative;top:2px;}
+   
+   .orderList_right li:hover .a_bottom{border-top:none;margin-top: 0;}
+   .orderList_right .a_top:hover{border:1px solid #a4d2e6;}
+   .orderList_right .a_bottom:hover{border:1px solid #a4d2e6!important;margin-top:-1px!important;}
+   
+   .orderList_right .a_bottom{display:block;height:22px;width: 258px;padding:13px 0;
+   text-align:center;background: #fff;border-top:1px solid #fff;border-radius:0 0 5px 5px;
+   margin-top:-1px;line-height:22px;}
+
+   .orderList_right .a_bottom .price{font-size:14px;padding:0 5px;}
+   .orderList_right a .price{color:#ff883a;}
+   .orderList_right .a_bottom .icon-plan{width: 20px;height: 20px;background-position:-186px 3px;top:5px;}
+   .orderList_right .a_bottom .icon-arrow{width: 15px;height: 15px;background-position:-96px -155px;top:4px;}
+  

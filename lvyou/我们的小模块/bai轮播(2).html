@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>焦点条_2</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<script type="text/javascript" src="lib/jquery-1.11.3.min.js"></script>
+	<style>
+		*{margin:0;padding:0}
+		img{display:block;}
+		ul,ol{list-style:none}
+		.lunbo-tow{width: 100%;height: 380px;position: relative;}
+		.lunbo-tow ul{width: 1000%;height: 380px;position: absolute;left: 0;top: 0;}
+		.lunbo-tow ul li{width:10%;height: 380px;float: left;}
+
+		.lunbo-tow ol{position: absolute;bottom:20px;left: 50%;margin-left: -40px;text-indent: -9999px;width:90px;}
+		.lunbo-tow ol li{width: 30px;height: 5px;background-color:rgba(255,255,255,0.5); float: left;margin-left: 10px;}
+
+		.lunbo-tow li.on{background-color:rgba(215,81,30,0.5);}
+	</style>
+
+	<script>
+		$(function(){
+			var timer = null;
+			var index=0;
+			$(".lunbo-tow ol li").click(function() {
+				console.log($(".lunbo-tow ul"))
+				var index=$(this).index();
+				$(this).addClass('on').siblings('li').removeClass('on');
+				$(".lunbo-tow ul").stop().animate({"left":-index+"00%"},1000,"swing");
+			});
+
+			clearInterval(timer);
+			timer = setInterval(function(){
+				index++;
+				if(index>$('.lunbo-tow ol li').length-1){
+					index=0;
+				};
+				$('.lunbo-tow ol li').eq(index).addClass('on').siblings('li').removeClass('on');
+				$(".lunbo-tow ul").stop().animate({"left":-index+"00%"},1000,"swing");
+				
+			},5000);
+
+		})
+	</script>
+
+</head>
+<body>
+	<div class="lunbo-tow">
+		<ul>
+			<li><img src="img/china_hotel/20160218_banner2.jpg" alt=""></li>
+			<li><img src="img/china_hotel/ad2_20151228.jpg" alt=""></li>
+		</ul>
+
+		<ol>
+			<li class="on">1</li>
+			<li>2</li>
+		</ol>
+	</div>
+	
+</body>
+</html>

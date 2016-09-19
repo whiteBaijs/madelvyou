@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<style>
+		.lunbo{
+			width: 100%;
+			position: relative;
+			height: 381px;
+			overflow: hidden;
+		}
+		.lunbo ul{
+			width: 1000%;
+		}
+
+		.lunbo ul li{
+			width: 10%;
+			height: 381px;
+			display: none;
+			
+		}
+		.lunbo ul li img{
+			width: 100%;
+			height: 381px;
+		}
+
+		.lunbo ol{
+			position: absolute;
+			left: 50%;
+			bottom: 25px;
+			margin-left: -80px;
+		}
+
+		.lunbo ol li{
+			float: left;
+			width: 20px;
+			height: 20px;
+			margin-left: 20px;
+			background: #ccc;
+			text-indent: -9999px;
+			border-radius: 50%;
+		}
+
+		.lunbo li.on{
+			background: #fff;
+		}
+	</style>
+	<script type="text/javascript" src="lib/jquery-1.11.3.min.js"></script>
+	<script>
+		$(function(){
+			var index = 0;
+			var timer;
+			//注册点击事件
+			$(".lunbo ol li").click(function(){
+				index = $(this).index();
+				// console.log(index);
+				$(this).addClass('on').siblings('li').removeClass('on');
+				$(".lunbo ul li").eq(index).hide().fadeIn(500).siblings('li').show().fadeOut(500);	
+			});
+
+			clearInterval(timer);
+			timer=setInterval(function(){
+					//时间函数中索引变化
+						index++;
+						if (index > $('.lunbo ol li').length-1){
+							index = 0;
+						}
+						// $(".lunbo ol li").click();
+					// console.log(index);
+					//时间函数中的行为变化
+					$('.lunbo ol li').eq(index).addClass('on').siblings('li').removeClass('on');
+					$(".lunbo ul li").eq(index).hide().fadeIn(500).siblings('li').show().fadeOut(500);					
+			},5000);
+
+
+		})
+	</script>
+</head>
+<body>
+	<div class="lunbo">
+			<ul>
+				<li style="display:block"><a href=""><img src="img/duan_zu/head01.jpg" alt="" ></a></li>
+				<li><a href=""><img src="img/duan_zu/head02.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/duan_zu/head03.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/duan_zu/head01_20160425.jpg" alt=""></a></li>
+			</ul>
+
+			<ol>
+				<li class="on">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ol>
+			
+		</div>
+</body>
+</html>

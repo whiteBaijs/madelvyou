@@ -1,0 +1,307 @@
+ /*
+  *公共模块样式
+*/
+
+/*--------顶部&顶部导航模块---start--------*/
+.header {width:100%;height:115px;}
+.header .header_top{width:1200px;height:60px;padding-top:15px;margin:0 auto;}
+.header_top .logo{width:130px;height:48px;background:url(../img/index/el_com.png) -658px 0px;overflow: hidden;}
+.header_top .logo h1{text-indent:-999px;color:#fff;}
+.header .fr li{float:left;}
+.header .right ul{margin-right: 10px;}
+.header .right ul a:hover{color:#ff6a6a;}
+.header .right .lan{background:#fff;border:1px solid #fff;margin-top:-3px;position: relative;z-index: 2;}
+.header .right .lan p.lang{display: none;border-top: 1px dashed #cacaca;}
+
+.header .right .lan:hover{border:1px solid #ccc;}
+.header .right .lan:hover p.lang{display: block;width:100%;}
+.header .right .lan p:hover a{color:#ff6a6a;}
+.header .right .lan p a{display:inline-block;height:28px;line-height:28px;padding:0 5px;}
+
+.header .right ul li{height:21px;padding:0 12px 0 10px;}
+.header .right li i {display:inline-block;width:11px;height:5px;
+            background:url(../img/index/icon_2015.png) -379px -13px;}
+.header ul b{display:inline-block;width:1px;height: 12px;background:#999;position: relative;top:2px;left: 10px;}
+.header ul a{font-family: '宋体';font-size: 12px;color: #999999;}
+.header .mobile{width:150px;height:42px;font-size:14px;color:#ff6c67;cursor:pointer;
+    position: relative;}
+
+.header .mobile .show{position: absolute;top:0px;left: -5px;display: none;z-index:999;}
+.header .mobile .show i{position:absolute;top:47px;left:40px;display: block;width:20px;height:10px;background:#fff url(../img/index/icon_2015.png) no-repeat -211px -2px; z-index:4;}
+.header .mobile .show .pic{position:absolute;top:55px;left:-18px;width:237px;height:112px;border:1px solid #c5c5c5;background:#fff url(../img/index/icon_2015.png) no-repeat -375px -230px;z-index:3;}
+
+.header .mobile i.fl{display:inline-block;width:40px;height:40px;
+        background:url(../img/index/com_icon_phone.gif);}
+.header .mobile em,.header .mobile span{display:inline-block;margin-left:10px;}
+
+.header .phone{width: 180px;height: 42px;font-size: 14px;cursor: pointer;position: relative;}
+.header .phone i.pe{display:inline-block;width:42px;height:42px;
+    background:url(../img/index/icon_2015.png) -42px -2px;margin-right: 15px;}
+.header .phone i.arrow{display:inline-block;width:9px;height:8px;
+background:url(../img/index/icon_2015.png) -378px -12px;position: relative;bottom:-8px;left:10px;}
+
+.header .phone .show{position: absolute;left:5px;top:55px;display: none;}
+.header .phone .show i{position:absolute;left:35px;top:-8px;display: block;width: 20px;height: 10px;background:#fff url(../img/index/icon_2015.png) no-repeat -211px -2px;z-index: 4;}
+.header .phone .show ul{position:absolute;left:0px;top:0px;width:170px;height:135px;border:1px solid #c5c5c5;padding-top:5px;background:#fff;z-index:3;}
+.header .phone .show ul li{width:100%;height:auto;border-bottom: 1px dashed #c5c5c5;padding:5px 0;}
+.header .phone .show ul li p{font-size: 12px;line-height:18px;text-indent: 10px;color: #999;}
+.header .phone .show ul li p.hongkong{line-height:18px;text-indent:4em;}
+.header .phone .show ul li.last{border-bottom:none;}
+
+.header .phone em{color:#2064c8;font-size: 16px;}
+.header .phone span{color:#999;font-size: 14px;}
+/*------------顶部模块end------------*/
+
+/*--------顶部导航模块start--------*/
+.login_outer{position: relative;}
+.header_nav_wrap{width:100%;height: 40px;background: #2064c8;}
+
+.header .nav li{float: left;position: relative;}
+/*提取该模块公用样式*/
+.header .nav .rent:after,.header_nav_wrap .nav .car:after,
+.header .nav .useCar:after,.header_nav_wrap .nav .eightDis:after{content:'';
+display:block;height:20px;position:absolute;top:-10px;background:url(../img/index/el_com.png);
+z-index: 2;}
+.header .nav .rent:after{width:39px;left:45px;background-position:-470px -29px;}
+.header .nav .car:after{width:39px;left:35px;background-position:-427px -29px;}
+.header .nav .useCar:after{width:17px;left:30px;background-position:-490px 0px;}
+.header .nav .eightDis:after{width:23px;left:55px;background-position:-509px 0px;}
+.header .nav li a{color: #fff;padding:10px 12px;line-height: 40px;font-family: '微软雅黑';font-size: 14px;border-right: 1px solid #3774ce;}
+.header .nav li a:hover{background:#0053ac;}
+.header .nav li.active{background:#003679;}
+.header_nav{width:1200px;margin:0 auto;}
+.header .login_btn{background:#0053ac;padding:0 26px;cursor: pointer;}
+.header .login_btn a{color: #fff;line-height: 40px;}
+.header .login_btn a:hover{color:#fff544;}
+/*鼠标移入, 登录框显示*/
+.header .login_outer:hover .login_block{display: block;}
+.header .login_btn b{display:inline-block;width: 1px;height: 12px;background:#b5ffd8;position: relative;top:0px;left: 0px;}
+/*导航右 登录按钮*/
+.login_block{width:182px;height: 250px;background:#fff;position: absolute;top: 40px;right: 0;border:1px solid #c5c5c5;padding:15px 17px 15px 10px;box-shadow: 1px 1px 1px 0px #ccc;
+    display: none;z-index: 999;}
+.login_block .loginBtn{width:180px;height:34px;line-height:34px;background:#ff8800;border:none;display:block;border-radius:3px;text-align:center;margin:1px auto;color: #fff;margin-bottom: 20px;cursor: pointer;}
+.login_block li{width:60px;height:70px;float: left;}
+.login_block li a{color: #999;display:inline-block;white-space:nowrap;width:66px;height:45px;font-size: 12px;background:url(../img/index/el_com.png);text-align:center;line-height: 95px;}
+
+.book_a ul li.bg_r1 a{background-position:-140px -682px; }/*酒店订单*/
+.book_a ul li.bg_r2 a{background-position:-207px -573px; }/*团购订单*/
+.book_a ul li.bg_r3 a{background-position:-204px -682px;}/*机票订单*/
+.book_a ul li.bg_r4 a{background-position:-140px -627px; }/*火车票订单*/
+.book_a ul li.bg_r5 a{background-position:-204px -627px; }/*现金账户*/
+.book_a ul li.bg_r6 a{background-position:-269px -627px; }/*汽车票订单*/
+.book_a ul li.bg_r7 a{background-position:-140px -572px; }/*酒店收藏*/
+.book_a ul li.bg_r8 a{background-position:-269px -572px; }/*我的点评*/
+.book_a ul li.bg_r9 a{background-position:-269px -682px; }/*个人设置*/
+/*hover*/
+
+.book_a ul li.bg_r1 a:hover{background-position:20px  -682px; }/*酒店订单*/
+.book_a ul li.bg_r2 a:hover{background-position:-35px -573px; }/*团购订单*/
+.book_a ul li.bg_r3 a:hover{background-position:-35px -682px;}/*机票订单*/
+.book_a ul li.bg_r4 a:hover{background-position:20px -627px; }/*火车票订单*/
+.book_a ul li.bg_r5 a:hover{background-position:-35px -627px; }/*现金账户*/
+.book_a ul li.bg_r6 a:hover{background-position:-91px -627px; }/*汽车票订单*/
+.book_a ul li.bg_r7 a:hover{background-position:20px  -572px; }/*酒店收藏*/
+.book_a ul li.bg_r8 a:hover{background-position:-88px -572px; }/*我的点评*/
+.book_a ul li.bg_r9 a:hover{background-position:-88px -682px; }/*个人设置*/
+/*--------------顶部&头导航模块-------end-------*/
+
+/*--------------焦点图模块----start----------*/
+.lunbo-tow img{display:block;}
+.lunbo-tow{width: 100%;height: 380px;position: relative;overflow: hidden;}
+.lunbo-tow ul{width: 1000%;height: 380px;position: absolute;left:-100%;top: 0;}
+.lunbo-tow ul li{width:10%;height: 380px;float: left;}
+
+.lunbo-tow ol{position: absolute;bottom:20px;left: 50%;margin-left: -40px;text-indent: -9999px;width:90px;}
+.lunbo-tow ol li{width: 30px;height: 5px;background-color:rgba(255,255,255,0.5); float: left;margin-left: 10px;}
+
+.lunbo-tow li.on{background-color:rgba(215,81,30,0.5);}
+/*--------------焦点图模块----start----------*/
+
+/*--------------手风琴模块----start----------*/
+.ifold_wrap{width:100%;}
+.ifold{width:1200px;height: 260px;overflow: hidden;margin:0px auto;}
+.ifold ul{width:2800px;}
+.ifold ul li:nth-child(1){width: 170px;}
+.ifold ul li:nth-child(2){width: 170px;}
+.ifold ul li{width: 172px;height: 260px;float: left;position: relative;left:0;top:0;overflow: hidden;}
+
+.ifold ul .ipic1{background:url(../img/index/20150422_ifold1.jpg) no-repeat;}
+.ifold ul .ipic2{background:url(../img/index/20150120_ifold2.jpg) no-repeat;}
+.ifold ul .ipic3{background:url(../img/index/20150120_ifold3.jpg) no-repeat;}
+.ifold ul .ipic4{background:url(../img/index/20150120_ifold4.jpg) no-repeat;}
+.ifold ul .ipic5{background:url(../img/index/20150120_ifold5.jpg) no-repeat;}
+.ifold ul .ipic6{background:url(../img/index/20150120_ifold6.jpg) no-repeat;}
+.ifold ul .ipic7{background:url(../img/index/20150120_ifold7.jpg) no-repeat;}
+.ifold ul .ipic{height: 260px;margin-left: -105px;}
+.ifold ul a .imask{position: absolute;overflow: hidden;width: 100%;height: 100%;left: 0;top: 0;background: rgba(0,0,0,.3);}
+.ifold ul a .imask h4{color: #fff;width: 30px;margin: 0 auto;display: block;
+    font: 30px/30px 'Microsoft Yahei';position: relative;padding:30px 0 0 0;}
+/*--------------手风琴模块 ----end----------*/
+/*--------------底部艺龙服务协议模块 ----start----------*/
+
+.suprise-wrap{width:100%;}
+  .surprise-con{width: 1200px;height:180px;background:#f7f7f7;margin:0px auto;overflow: hidden;}
+  .surprise-top{width: 1160px;height:60px;padding:20px;border-bottom: 1px solid #e5e5e5;}
+  .surprise-con ul{width: 1160px;height:60px;}
+  .surprise-con ul li{width:290px;float: left;}
+  .custom_rotate ul li:hover i{animation:myRotate 0.3s ease;-webkit-animation-iteration-count:3; -moz-animation-iteration-count:3;-ms-animation-iteration-count:3;-o-animation-iteration-count:3;animation-iteration-count:3;}
+
+  @-webkit-keyframes -webkit-myRotate{
+      0%{transform: rotate(0deg);}
+      25%{transform: rotate(-15deg);}
+      50%{transform: rotate(-30deg);}
+      75%{transform: rotate(-15deg);}
+      100%{transform: rotate(0deg);}
+  }
+  @-moz-keyframes -moz-myRotate{
+      0%{transform: rotate(0deg);}
+      25%{transform: rotate(-15deg);}
+      50%{transform: rotate(-30deg);}
+      75%{transform: rotate(-15deg);}
+      100%{transform: rotate(0deg);}
+  }
+  @-ms-keyframes -ms-myRotate{
+      0%{transform: rotate(0deg);}
+      25%{transform: rotate(-15deg);}
+      50%{transform: rotate(-30deg);}
+      75%{transform: rotate(-15deg);}
+      100%{transform: rotate(0deg);}
+  }
+  @-o-keyframes -o-myRotate{
+      0%{transform: rotate(0deg);}
+      25%{transform: rotate(-15deg);}
+      50%{transform: rotate(-30deg);}
+      75%{transform: rotate(-15deg);}
+      100%{transform: rotate(0deg);}
+  }
+  @keyframes myRotate{
+      0%{transform: rotate(0deg);}
+      25%{transform: rotate(-15deg);}
+      50%{transform: rotate(-30deg);}
+      75%{transform: rotate(-15deg);}
+      100%{transform: rotate(0deg);}
+  }
+   .surprise-con ul span{vertical-align: 25px;}
+   .surprise-con ul i{display:inline-block;width:60px;height:60px;background:url(../img/index/hotel_index_icon.png);margin-right: 10px;}
+   .surprise-con ul .sur-icon1{background-position:-286px -218px;}
+   .surprise-con ul .sur-icon2{background-position:-354px -218px;}
+   .surprise-con ul .sur-icon3{background-position:-423px -218px;}
+   .surprise-con ul .sur-icon4{background-position:-490px -220px;}
+   .surprise {width: 1200px;height:80px;display:inline-block;}
+    .surprise .sur-email{width: 680px;margin:24px auto 0px;}
+    .surprise .sur-email span{color: #71829d}
+    .surprise .sur-email input{width: 206px;height: 28px;font:14px/28px 微软雅黑;border:none; border:1px solid #ccc;color: #555;text-indent: 5px;}
+    .surprise .sur-email button{width:80px;height:30px;border:none;color:#fff;background: #3377dd;margin-left:-5px;}
+    .surprise .sur-left{width:110px;height: 80px;background:url(../img/index/hotel_index_icon.png) -592px -210px;margin-left:-20px;transition:all 1s;}
+    .surprise .sur-right{/*width:94px;height:80px;*/line-height: 80px;padding: 0 10px 0 0;}
+    .surprise .sur-right a{color:#3377dd;font:14px/80px Microsoft yahei;}
+    .surprise .sur-right a:hover{color:#ff6a6a;}
+    .surprise:hover .sur-left{margin-left: 0;}
+/*--------------底部艺龙服务协议模块 ----end----------*/
+/*公共样式myRotate---已用*/
+
+/*---------- 底部及版权 -----start-------*/
+footer{width:100%;padding-top:20px;border-top: 1px solid #EEE;}
+footer a{text-decoration: none;color: #333;}
+.footer_con{width: 1000px;margin: 0 auto;}
+footer ul{
+    display:flex;
+}
+footer ul li{
+    flex:1;
+    text-align: center;
+}
+footer ul li h3{
+    border-left: 3px solid #5D96C7;
+    padding: 0 0 0 10px;
+    height: 18px;
+    font: 18px/1 Microsoft Yahei;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+footer ul li a{
+        color: #333;
+        text-decoration: none;
+         cursor: pointer;
+        transition: margin 0.5s;
+        font-size: 12px;
+}
+
+footer ul li a:hover{
+    margin-left:5px;
+    color: #FF5555; 
+}
+
+footer ul .footer3 span{
+    width: 97px;
+    height: 97px;
+    display: inline-block;
+    overflow: hidden;
+    background: url(../img/duan_zu/icon2015-0.png) no-repeat -260px -55px;
+}
+
+footer ul .footer4 span{
+    width: 97px;
+    height: 97px;
+    display: inline-block;
+    overflow: hidden;
+    background: url(../img/duan_zu/icon2015-0.png) no-repeat -365px -55px;
+}
+.zihao{text-align: center;margin-top:20px;font-size: 12px;}
+.zihao i{
+    width: 20px;
+    height: 20px;
+    background: url(../img/duan_zu/el_com.png) no-repeat -940px -202px;
+    display: inline-block;
+}
+.footer-button a{
+        display: inline-block;
+        width: 80px;
+        line-height: 26px;
+        text-align: center;
+        height: 37px;
+        margin: 0 5px;
+        color: #666;
+        text-decoration: none;
+        text-indent: -9999em;
+        position: relative;
+        top: 0;
+        transition: top 0.5s
+}
+.footer-button{width: 450px;margin: 30px auto;height: 30px;text-align: center;}
+.footer-button a:hover{
+    top: -10px;
+}
+
+.footer-button a.pic1{
+    width: 76px;
+    height: 30px;
+    background: url(../img/duan_zu/icon2015-0.png) no-repeat -330px -441px;
+}
+
+.footer-button a.pic2{
+    width: 90px;
+    height: 30px;
+    background: url(../img/duan_zu/icon2015-0.png) no-repeat -476px -441px;
+}
+
+.footer-button a.pic3{
+    width: 90px;
+    height: 30px;
+    background: url(../img/duan_zu/icon2015-0.png) no-repeat -566px -441px;
+}
+
+.footer-button a.pic4{
+    width: 90px;
+    height: 30px;
+    background: url(../img/duan_zu/icon2015-0.png) no-repeat -656px -441px;
+}
+/*---------- 底部及版权end ------------*/
+
+/*网页中间每部分小标题 start*/
+
+
+/*网页中间每部分小标题 end*/
+
+

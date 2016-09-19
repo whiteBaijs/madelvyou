@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旅游指南model</title>
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="css/base.css">
+
+</head>
+<style>
+    /*公用*/
+   .travel_guide a{text-decoration: none;}
+   .travel_guide{width:1200px;height:274px;margin:10px auto;}
+   /*旅游指南左侧选项卡 start*/
+    .tab_show_img{width:580px;height: 220px;margin-right: 20px;}
+    /*#89ca00*/
+    .tab_show_img ul{width:220px;}
+    .tab_show_img ul li{height:54px;line-height:54px;border-bottom:1px solid #ccc;}
+    .tab_show_img ul li.on{background:#89ca00;}
+    .tab_show_img ul li.on a{color: #fff;}
+    .tab_show_img ul a{display:block;height:54px;font:14px/54px Microsoft yahei;text-indent:10px;color:#555;}
+    /*给a添加一个伪类做定位的箭头图标*/
+   /* .tab_show_img ul i{width:20px;height:10px;position:absolute;top:47px;left:40px;background:#fff url(img/index/icon_2015.png) no-repeat -211px -2px;}
+    */
+    .tab_show_img ol li{width:360px;height:220px;overflow: hidden;}
+   
+    .tab_show_img ol li{position: absolute;display: none;}
+    .tab_show_img ol a{}
+    .tab_show_img ol li.show{display: block;}
+    /*旅游指南左侧选项卡 end*/
+
+    /*旅游指南顶部标题 start*/
+    .travel_title{height: 40px;line-height: 40px;border-bottom:2px solid #77cc11;margin-bottom: 10px;}
+    .travel_title a{font-size:24px;color:#77cc11;}
+    /*旅游指南顶部标题 end*/
+
+    /*旅游指南右侧 start*/
+    .itravel{width: 290px;height: 221px;box-shadow:0 1px 0 0 #ccc;background: #f7f7f7;}
+    .itravel:hover{box-shadow:0 2px 0 0 #77cc11; }
+    .itravel img{display: block;}
+    .itravel p a{height: 40px;font:14px/40px '微软雅黑';padding:0 5px;}
+    .itravel p a:hover{color: #ff5555}
+    .fujian{margin-left:20px;}
+    /*旅游指南右侧 end*/
+
+
+</style>
+<script src='lib/jquery-1.11.3.min.js'></script>
+<script>
+    $(function(){
+        // 旅游指南模块
+        // 获取tab_show_img
+        var $tab = $('.tab_show_img');
+        var $tabLi = $tab.find('ul li');
+        var $olis = $tab.find('ol li')
+        $tabLi.hover(function(){
+            $olis.eq($(this).index()).addClass('show').siblings('li').removeClass('show');
+            $(this).addClass('on').siblings().removeClass('on');
+        });
+    })
+</script>
+<body>
+    <div class="travel_guide_wrap">
+
+        <div class="travel_guide Clearfix">
+            <div class="travel_title">
+                <h3><a href="#">旅游指南</a></h3>
+            </div>
+         <!-- 旅游指南左侧选项卡 start-->
+            <div class="tab_show_img fl Clearfix">
+                <ul class="fl">
+                    <li class="on"><a href="#">互联网+旅游 问道青城山</a><i></i></li>
+                    <li><a href="#">青春520 从三亚文艺客栈开始</a><i></i></li>
+                    <li><a href="#">厦门中山路上的闽南风情</a><i></i></li>
+                    <li><a href="#">敦煌 去莫高窟看飞天舞</a><i></i></li>
+                </ul>
+                <ol class="fl">
+                    <li class="show"><a href="#"><img src="img/index/tab_show_img1.jpg" alt="青城山"></a></li>
+                    <li><a href="#"><img src="img/index/tab_show_img2.jpg" alt="三亚"></a></li>
+                    <li><a href="#"><img src="img/index/tab_show_img3.jpg" alt="闽南"></a></li>
+                    <li><a href="#"><img src="img/index/tab_show_img4.jpg" alt="敦煌"></a></li>
+                </ol>
+                
+            </div>
+             <!-- 旅游指南左侧选项卡 end-->
+            <!-- 丽江 -->
+            <div class="itravel lijiang fl">
+                <a href="javascript:0"><img src="img/index/travel_lijiang.jpg" alt="邂逅丽江的悠闲慢时光"></a>
+                <p><a href="javascript:0">邂逅丽江的悠闲慢时光</a></p>
+                
+            </div>
+            <!-- 福建 -->
+            <div class="itravel fujian fl">
+                 <a href="javascript:0"><img src="img/index/travel_fujian.jpg" alt="跟着文艺小HI疯玩福建"></a>
+                 <p><a href="javascript:0">跟着文艺小HI疯玩福建</a></p>
+                
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

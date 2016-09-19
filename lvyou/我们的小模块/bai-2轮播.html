@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播之精灵图</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+	<style>
+		a{
+			text-decoration: none;
+		}
+		.big{
+			margin: 0 auto;
+			width: 1201px;
+			position: relative;  
+		}
+		.box{	
+			overflow: hidden;
+			    height: 283px;
+			    position: relative;    
+			    margin-right: -1px;
+			   	width: 1201px;
+		}
+		.box .content{
+
+			    width: 1950px;
+			    height: 283px;
+			    position: absolute;
+			    left: 0px;
+			    top: 0px;
+		}
+		.box .content li{
+			    width: 151px;
+			    float: left;
+			    margin-right: -1px;
+		}
+		.box .content li a{
+			    display: block;
+			    height: 110px;
+			    border: 1px solid #F1F1F1;
+			    margin-bottom: -1px;
+			    position: relative;
+			    text-align: center;
+			    padding: 15px;
+			    font-size: 14px;
+			    color: #555;
+			    cursor: pointer;
+		}
+
+		/*.box .content li a:hover{
+			border: 1px solid #F55;
+		}*/
+		.box .content li a.linktop{
+			    border-top: 1px solid #FFF;
+		}
+		.box .content li a.linkbottom{
+			   border-bottom: 1px solid #FFF;
+		}
+
+	/*小图定位*/
+		.box .content li a .i29{
+			background-position:-660px -170px; 
+		}
+		.box .content li a .i30{
+			background-position:-780px -170px; 
+		}
+
+		.box .content li a .i1{
+			background-position:-110px 0; 
+		}
+		.box .content li a .i2{
+			background-position:-220px 0; 
+		}
+		.box .content li a .i3{
+			background-position:-330px 0; 
+		}
+		.box .content li a .i4{
+			background-position:-440px 0; 
+		}
+		.box .content li a .i5{
+			background-position:-550px 0; 
+		}
+		.box .content li a .i6{
+			background-position:-670px 0; 
+		}
+		.box .content li a .i7{
+			background-position:-782px 0; 
+		}
+		.box .content li a .i8{
+			background-position:-898px -170px; 
+		}
+		.box .content li a .i9{
+			background-position:-900px 0; 
+		}
+		.box .content li a .i10{
+			background-position:-0px -0px; 
+		}
+		.box .content li a .i11{
+			background-position:-110px -82px; 
+		}
+
+		.box .content li a .i12{
+			background-position:-550px  -170px; 
+		}
+		.box .content li a .i13{
+			background-position:-220px  -82px; 
+		}
+		.box .content li a .i14{
+			background-position:-340px  -82px; 
+		}
+		.box .content li a .i15{
+			background-position:-440px  -82px; 
+		}
+		.box .content li a .i16{
+			background-position:-560px  -82px; 
+		}
+		.box .content li a .i17{
+			background-position:-670px  -82px; 
+		}
+		.box .content li a .i18{
+			background-position:-780px  -82px; 
+		}
+		.box .content li a .i19{
+			background-position:-890px  -82px; 
+		}
+		.box .content li a .i20{
+			background-position:-0px  -170px; 
+		}
+		.box .content li a .i21{
+			background-position:-220px -170px; 
+		}
+		.box .content li a .i22{
+			background-position:-110px -170px;  
+		}
+		.box .content li a .i23{
+			background-position:-340px -170px; 
+		}
+		.box .content li a .i24{
+			background-position:-440px -170px; 
+		}
+
+		.box .content li a i{
+			    transition: margin-top 0.5s;
+			    background: url(img/china_hotel/pic.png) no-repeat 0 0;
+			    width: 110px;
+			    height: 80px;
+			    display: inline-block;
+					}
+					/*各个小图坐标*/
+		
+	
+		.box .content li a:hover i	{
+				margin-top:-10px;
+		}	
+
+		.box .content li a p{
+			
+			position: absolute;
+			left:0;
+			bottom:10px;
+			text-align: center;
+			width:100%;
+			
+		}
+
+		.box .content li a:hover p{
+
+			color: #F55;
+			position: absolute;
+			left:0;
+			bottom:10px;
+			text-align: center;width:100%;
+		}
+
+		.big span{
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			top:50%;
+			left: -20px;
+			margin-top: -20px;
+			 cursor: pointer;
+		}
+		/*按钮图标*/
+		.big .btn-left{
+			background: url(img/china_hotel/hotel_index_icon.png) no-repeat -105px -296px;
+			display: none;
+		}
+		.big .btn-right{
+			background: url(img/china_hotel/hotel_index_icon.png) no-repeat -158px -296px;
+			left:auto;
+			right: -20px;
+		}
+
+	</style>
+	<script>
+		$(function(){
+
+			var index=0;
+			// 左边点击事件
+			$('.big .btn-right').click(function(event) {
+					index++;
+					$(".big .content").animate({
+						'left': '-'+index*150+"px"
+					},
+						500, function() {
+							if(index>=5){
+								$('.big .btn-right').hide();
+							}else if(index<5){
+								$('.big .btn-left').show();
+							}
+							// if($('.box .content').css('left')>=0){
+							// 	$('.box .btn-left').hide();
+							// }else{
+							// 	$('.box .btn-left').show();
+							// };
+						})
+					});
+			// 右边点击事件
+			$('.big .btn-left').click(function(event) {
+					index--;
+					$(".big .content").animate({
+						'left': '-'+index*150+"px"
+					},
+						500, function() {
+							if(index<=0){
+								$('.big .btn-left').hide();
+							}else if(index>0){
+								$('.big .btn-right').show();
+							};
+
+							// if($('.box .content').css('left')<=-1200+'px'){
+							// 	$('.box .btn-right').hide();
+							// }else{
+							// 	$('.box .btn-right').show();
+							// };
+							
+						})
+					});
+
+			
+			// 鼠标悬停事件
+			$('.big').mouseenter(function(event) {
+						if(index<=0){
+								$('.big .btn-left').hide();
+								$('.big .btn-right').show();
+							}else if(index>=5){
+								$('.big .btn-left').show();
+								$('.big .btn-right').hide();
+								
+							}else{
+								$('.big span').show();
+							};
+				$(".big .btn-right").css({'background-position':'-264px -296px'});
+				$(".big .btn-left").css({'background-position':'-211px -296px'});
+			}).mouseleave(function(event) {
+					$('.big span').hide();
+					$(".big .btn-right").css({'background-position':'-158px -296px'});
+					$(".big .btn-left").css({'background-position':'-105px -296px'});
+			});
+
+		})
+	</script>
+</head>
+<body>
+	<div class="big">
+		<div class="box">
+			<ul class="content">
+				<li >
+					<a href="" class="linktop">
+						<i class="i1"></i>
+						<p>洲际酒店集团</p>
+					</a>
+					<a href="" class="">
+						<i class='i2'></i>
+						<p>喜达屋酒店集团</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="" class="linktop">
+						<i class='i3'></i>
+						<p>七天</p>
+					</a>
+					<a href="" class="">
+						<i class='i4'></i>
+						<p>喜达屋酒店集团</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="" class="linktop">
+						<i class='i5'></i>
+						<p>洲际酒店集团</p>
+					</a>
+					<a href="" class="">
+						<i class='i6'></i>
+						<p>喜达屋酒店集团</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="" class="linktop">
+						<i class='i7'></i>
+						<p>洲际酒店集团</p>
+					</a>
+					<a href="" class="">
+						<i class='i8'></i>
+						<p>喜达屋酒店集团</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="" class="linktop">
+						<i class='i9'></i>
+						<p>洲际酒店集团</p>
+					</a>
+					<a href="" class="">
+						<i class='i10'></i>
+						<p>喜达屋酒店集团</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="" class="linktop">
+						<i class='i11'></i>
+						<p>洲际酒店集团</p>
+					</a>
+					<a href="" class="">
+						<i class='i12'></i>
+						<p>喜达屋酒店集团</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="" class="linktop">
+						<i class='i13'></i>
+						<p>洲际酒店集团</p>
+					</a>
+					<a href="" class="">
+						<i class='i14'></i>
+						<p>喜达屋酒店集团</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="" class="linktop">
+						<i class='i15'></i>
+						<p>洲际酒店集团</p>
+					</a>
+					<a href="" class="">
+						<i class='i16'></i>
+						<p>喜达屋酒店集团</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="" class="linktop">
+						<i class='i17'></i>
+						<p>洲际酒店集团</p>
+					</a>
+					<a href="" class="">
+						<i class='i18'></i>
+						<p>喜达屋酒店集团</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="" class="linktop">
+						<i class='i19'></i>
+						<p>洲际酒店集团</p>
+					</a>
+					<a href="" class="">
+						<i class='i20'></i>
+						<p>喜达屋酒店集团</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="" class="linktop">
+						<i class='i21'></i>
+						<p>洲际酒店集团</p>
+					</a>
+					<a href="" class="">
+						<i class='i22'></i>
+						<p>喜达屋酒店集团</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="" class="linktop">
+						<i class='i23'></i>
+						<p>洲际酒店集团</p>
+					</a>
+					<a href="" class="">
+						<i class='i24'></i>
+						<p>喜达屋酒店集团</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="" class="linktop">
+						<i class="i29"></i>
+						<p>洲际酒店集团</p>
+					</a>
+					<a href="" class="">
+						<i class="i30"></i>
+						<p>喜达屋酒店集团</p>
+					</a>
+				</li>
+			</ul>
+			
+		</div>
+		<span class="btn-left"></span>
+		<span class="btn-right"></span>
+	</div>
+	
+</body>
+</html>
